@@ -35,3 +35,13 @@ Output of code referenced by election_results.txt
 I propose that the election commission can use the PyPoll_Challenge.py script, with some modifications, for other elections. Currently, the program is written to analyze the election_results.csv file by iterating through each row and reading the data in the second and third columns, 'County' and 'Candidate', in order to calculate and print the results. There are many different ways in which this code can be altered and used with any election results.
 
 For example, the program can be modified to determine which column to read data from by iterating through the header row. Then files with columns that are arranged in a different order will be analyzed accordingly. The programmer will also no longer have to inspect the data in order to ensure that script is reading the correct columns. Another possiblity is to read data from additional columns in order to calculate and print further results. This is useful for files containing more information, such as the type of ballot or the date that the vote was cast.
+
+This would  result in the utilization of another for loop as was done for county_list and candidate_names. 
+
+for county in count_list:
+
+    county_vote = county_votes.get(county)
+    county_vote_percentage = float(county_Vote) / float(total_votes) * 100
+    etc.
+    
+This code would allow us to cycle through numerous metrics which could possibly provide more contextual data. It could, for instance, determine how many ballot id's that end with a 1 or a 0 voted for a specific county or person. This may not be particularly useful, but if given more data the same break down can be done with different metrics.
