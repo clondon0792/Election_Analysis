@@ -38,10 +38,10 @@ For example, the program can be modified to determine which column to read data 
 
 This would  result in the utilization of another for loop as was done for county_list and candidate_names. 
 
-for county in count_list:
+    for county in count_list:
 
-    county_vote = county_votes.get(county)
-    county_vote_percentage = float(county_Vote) / float(total_votes) * 100
-    etc.
+        county_vote = county_votes.get(county)
+        county_vote_percentage = float(county_Vote) / float(total_votes) * 100
+        etc.
     
 This code would allow us to cycle through numerous metrics which could possibly provide more contextual data. It could, for instance, determine how many ballot id's that end with a 1 or a 0 voted for a specific county or person. This may not be particularly useful, but if given more data the same break down can be done with different metrics.
